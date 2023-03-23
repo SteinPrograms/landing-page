@@ -1,0 +1,56 @@
+html, body{
+    padding:0;
+    margin:0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #1C1F24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    overflow: visible;
+}
+
+#firstBar{
+    animation: firstBar 5s ease-in-out;
+}
+
+@keyframes firstBar{
+    0%{
+        transform: rotate(57deg) translateX(-200px) translateY(-200px);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+#secondBar{
+    animation: secondBar 5s ease-in-out ;
+}
+
+@keyframes secondBar{
+    0%{
+        transform: rotate(93deg) translateY(400px);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+#thirdBar{
+    animation: thirdBar 5s ease-in-out;
+}
+
+@keyframes thirdBar{
+    0%{
+        transform: rotate(-93deg) translateX(200px) translateY(200px);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
