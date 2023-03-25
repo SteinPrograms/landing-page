@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
+*{
+    --animation-duration : 1s;
+    --font-color: 255, 255, 255;
+
+    font-family: Inter;
+}
+
+
 html, body{
     padding:0;
     margin:0;
@@ -10,19 +20,34 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap:25px;
 }
 
 .logo{
     overflow: visible;
+    animation: bounce var(--animation-duration) var(--animation-duration) ease-in-out infinite;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
 
 #firstBar{
-    animation: firstBar 5s ease-in-out;
+    animation: firstBar var(--animation-duration) ease-in-out;
 }
 
 @keyframes firstBar{
     0%{
-        transform: rotate(57deg) translateX(-200px) translateY(-200px);
+        transform: translateX(-200px) translateY(-200px);
     }
     100%{
         transform: rotate(0);
@@ -30,12 +55,12 @@ body{
 }
 
 #secondBar{
-    animation: secondBar 5s ease-in-out ;
+    animation: secondBar var(--animation-duration) ease-in-out ;
 }
 
 @keyframes secondBar{
     0%{
-        transform: rotate(93deg) translateY(400px);
+        transform:  translateY(400px);
     }
     100%{
         transform: rotate(0);
@@ -43,14 +68,34 @@ body{
 }
 
 #thirdBar{
-    animation: thirdBar 5s ease-in-out;
+    animation: thirdBar var(--animation-duration) ease-in-out;
 }
 
 @keyframes thirdBar{
     0%{
-        transform: rotate(-93deg) translateX(200px) translateY(200px);
+        transform: translateX(200px) translateY(200px);
     }
     100%{
+        transform: rotate(0);
+    }
+}
+
+#title{
+    margin:0;
+    color: rgb(var(--font-color));
+    animation: title 0.4s var(--animation-duration) ease-in-out;
+    animation-fill-mode: forwards;
+    will-change: transform;
+    opacity: 0;
+}
+
+@keyframes title{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
         transform: rotate(0);
     }
 }
