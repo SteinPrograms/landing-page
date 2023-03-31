@@ -7,6 +7,9 @@
     font-family: Inter;
 }
 
+html{
+    overflow: hidden;
+}
 
 html, body{
     padding:0;
@@ -122,7 +125,7 @@ body{
 .catch{
     margin:0;
     color: rgb(var(--font-color));
-    animation: catchAnimation 2s var(--animation-duration) ease-in-out;
+    animation: catchAnimation 2s 3s ease-in-out;
     animation-fill-mode: forwards;
     will-change: transform;
     opacity: 0;
