@@ -16,11 +16,11 @@ html, body{
 }
 
 body{
-    background-color: #1C1F24;
+    background-color: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     gap:25px;
 }
 
@@ -83,7 +83,7 @@ body{
 #title{
     margin:0;
     color: rgb(var(--font-color));
-    animation: title 0.4s var(--animation-duration) ease-in-out;
+    animation: title 0.5s var(--animation-duration) ease-in-out;
     animation-fill-mode: forwards;
     will-change: transform;
     opacity: 0;
@@ -91,11 +91,43 @@ body{
 
 @keyframes title{
     0%{
-        opacity: 0;
-        transform: translateY(50px);
+        transform: translateX(50px);
     }
     100%{
         opacity: 1;
         transform: rotate(0);
+    }
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.catch{
+    margin:0;
+    color: rgb(var(--font-color));
+    animation: catchAnimation 2s var(--animation-duration) ease-in-out;
+    animation-fill-mode: forwards;
+    will-change: transform;
+    opacity: 0;
+    font-size: 2rem;
+}
+
+@keyframes catchAnimation{
+    0%{
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
     }
 }
