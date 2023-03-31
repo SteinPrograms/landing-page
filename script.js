@@ -26,4 +26,4 @@ textLogo.append(strong,light);
 title.append(textLogo);
 
 }
-setTimeout(function() { add_text(); }, 2000);
+// setTimeout(function() { add_text(); }, 2000);
