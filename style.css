@@ -92,6 +92,7 @@ body{
     }
 }
 
+
 @keyframes title{
     0%{
         transform: translateX(50px);
@@ -118,7 +119,7 @@ body{
     color: rgb(var(--font-color));
     white-space: nowrap;
     overflow: hidden;
-    animation-duration: 1s;
+    animation-duration: 3s;
     animation-name: typing;
     animation-timing-function: steps(14);
     animation-delay: var(--animation-duration);
@@ -129,14 +130,13 @@ body{
     opacity: 0;
 }
 
-
 @keyframes typing{
     from {
         width: 0;
         opacity: 1;
     }
     to { 
-        width: fit-content;
+        width: 100%;
         opacity: 1;
     }
 }
