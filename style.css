@@ -113,30 +113,30 @@ body{
     flex-direction: column;
 }
 
-.title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-
 .catch{
     margin:0;
     color: rgb(var(--font-color));
-    animation: catchAnimation 2s 3s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-duration: 1s;
+    animation-name: typing;
+    animation-timing-function: steps(14);
+    animation-delay: var(--animation-duration);
     animation-fill-mode: forwards;
     will-change: transform;
-    opacity: 0;
     font-size: 2rem;
+    text-align: center;
+    opacity: 0;
 }
 
-@keyframes catchAnimation{
-    0%{
-        transform: translateY(50px);
+
+@keyframes typing{
+    from {
+        width: 0;
+        opacity: 1;
     }
-    100%{
+    to { 
+        width: fit-content;
         opacity: 1;
     }
 }
