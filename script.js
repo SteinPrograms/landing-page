@@ -1,29 +1,18 @@
+const comingSoon = document.querySelector("p");
+const comingSoonText = comingSoon.textContent;
 
+// This allows to put the content for search engine optimization
+comingSoon.textContent = "";
+comingSoon.style.visibility = "visible";
 
-function add_text() {
-    const title = document.querySelector('.title');
-    const textLogo = document.createElement('p');
-    textLogo.className = 'text-logo';
-    const strong = document.createElement('strong');
-    strong.append('tein');
-    const light = document.createElement('p');
-    light.append('Programs');
+var previousDelay = 0;
 
-    textLogo.style = `
-    animation : title 1s ease-in-out;
-    margin:0;
-    color: rgb(var(--font-color));
-    animation-fill-mode: forwards;
-    will-change: transform;
-    opacity: 0;
-    font-size: 4rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-`
-
-textLogo.append(strong,light);
-title.append(textLogo);
-
-}
-// setTimeout(function() { add_text(); }, 2000);
+setTimeout(() => {
+    for (let i = 0; i < comingSoonText.length; i++) {
+        const delay = Math.floor(Math.random() * (250 - 25)) + 25;
+        setTimeout(() => {
+            comingSoon.append(comingSoonText[i]);
+        }, delay + previousDelay);
+        previousDelay += delay;
+    }
+}, 1500);

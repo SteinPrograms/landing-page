@@ -32,14 +32,6 @@ body{
     animation: bounce var(--animation-duration) var(--animation-duration) ease-in-out infinite;
 }
 
-@keyframes moveAside{
-    0%{
-        transform: translateX(0px);
-    }
-    100%{
-        transform: translateX(0px);
-    }
-}
 
 @keyframes bounce{
     0%{
@@ -93,22 +85,6 @@ body{
 }
 
 
-@keyframes title{
-    0%{
-        transform: translateX(50px);
-    }
-    100%{
-        opacity: 1;
-        transform: rotate(0);
-    }
-}
-
-@media screen and (max-width: 600px) {
-    body{
-        transform : scale(0.5)
-    }
-}
-
 body{
     display: flex;
     flex-direction: column;
@@ -117,26 +93,7 @@ body{
 .catch{
     margin:0;
     color: rgb(var(--font-color));
-    white-space: nowrap;
-    overflow: hidden;
-    animation-duration: 3s;
-    animation-name: typing;
-    animation-timing-function: steps(14);
-    animation-delay: var(--animation-duration);
-    animation-fill-mode: forwards;
-    will-change: transform;
     font-size: 2rem;
     text-align: center;
-    opacity: 0;
-}
-
-@keyframes typing{
-    from {
-        width: 0;
-        opacity: 1;
-    }
-    to { 
-        width: 100%;
-        opacity: 1;
-    }
+    visibility: hidden;
 }
